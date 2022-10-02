@@ -34,6 +34,10 @@ nav {
 
 }
 
+.place {
+    margin: 7px;
+}
+
 ul {
     display: flex;
     flex-direction: column;
