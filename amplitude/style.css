@@ -41,6 +41,10 @@ ul {
     list-style-type: none;
 }
 
+.place {
+    margin: 7px;
+}
+
 .logout {
     margin: 18px 30px;
 }
