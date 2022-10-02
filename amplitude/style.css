@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-direction: row;
+    color: #1E398F;
+    overflow: hidden;
+}
+
+header {
+    width: 151px;
+    height: 1023.75px;
+    background-color: #1E398F;
+    border-radius: 24px;
+    margin: 27.6px 0px 28.65px 76px;
+    padding: 30px;
+}
+
+.logo {
+    margin: 44.4px auto;
+}
+
+nav {
+
+    margin: 79.17px 30px 337.8px;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    list-style-type: none;
+}
+
+.logout {
+    margin: 18px 30px;
+}
+
+/* back */
+.back {
+    position: absolute;
+    height: 945.3468017578125px;
+    width: 1193.3333740234375px;
+    left: -44px;
+    top: 66.25311279296875px;
+    border-radius: 24px;
+    background: linear-gradient(180.02deg, #CFDAF0 77.37%, #1E398F 170.72%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 24px;
+    z-index: -1;
+}
+
+.menu {
+    width: 835px;
+    height: 887px;
+    margin: 101px 92px 92px 68px;
+}
+
+h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.scheme {
+    height: 342px;
+    width: 654px;
+    background: linear-gradient(134.98deg, rgba(255, 255, 255, 0.485714) -7.37%, rgba(255, 255, 255, 0) 25.24%, rgba(255, 255, 255, 0.452055) 39.42%, rgba(255, 255, 255, 0.465753) 73.44%, #FFFFFF 128.74%);
+    border-radius: 23px;
+    margin-top: 14px;
+}
+
+.knowledge {
+    margin: 45px 68px 46px 71px;
+}
+
+.information {
+
+    width: 631px;
+
+    margin-right: 14px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: justify;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 20px 0;
+    color: #1c3381;
+}
+
+.information ul {
+    margin-left: 20px;
+    gap: 3px;
+    list-style-type: disc;
+}
+
+ol {
+    margin-left: 20px;
+    gap: 3px;
+}
+
+.text {
+    width: 621px;
+    height: 315px;
+    overflow: auto;
+    background: linear-gradient(0.9deg, #CEDAFF 49.94%, rgba(206, 218, 255, 0) 127.84%);
+    border-radius: 23px;
+    padding: 14px 0px 0 50px;
+
+}
+
+.text::-webkit-scrollbar {
+
+    width: 14.5;
+    background: #B2BEE4;
+}
+
+.text::-webkit-scrollbar-thumb {
+    background: #CEDAFF;
+}
+
+.text img {
+    width: 500px;
+}
+
+.text p {
+    width: 500px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: justify
+}
+
+/* next */
+.next {
+
+    margin-top: 33px;
+    width: 455px;
+    height: 118px;
+    background: rgba(206, 218, 255, 0.46);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px 32px;
+}
+
+.next p {
+    width: 273.77px;
+    height: 86.21px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.next_page {
+    margin: 25px 0;
+    width: 111.09px;
+    height: 37.66px;
+    background: #1E398F;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.menu a {
+    color: #1E398F;
+    text-decoration: none;
+}
+
+a.tooltip span {
+    display: none;
+    padding: 2px 3px;
+    margin-left: 8px;
+    width: 130px;
+}
+
+a.tooltip:hover span {
+    display: block;
+    position: absolute;
+    top: 330px;
+    left: 100px;
+    height: 28.363636016845703px;
+    width: 100px;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #1E398F;
+}
+
+a.tooltip:hover span.aaa {
+    display: block;
+    position: absolute;
+    top: 540px;
+    left: 100px;
+    height: 28.363636016845703px;
+    width: 100px;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #1E398F;
+}
