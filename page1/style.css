@@ -112,19 +112,44 @@ main {
 
 .laba button {
     margin: 26.67px 0 21.52px;
-    width: 48.48px;
-    height: 48.48px;
+    width: 48px;
+    height: 48px;
     padding-top: 4px;
     border-radius: 100px;
     background-color: #fff;
+    transition: 0, 6s;
 }
 
 .laba button.left {
-    margin-left: 28.65px;
+    margin-left: 30px;
+
+    background: url(../page1/images/right.svg) no-repeat;
+    background-position: center;
+    transition: 0, 6s;
 }
 
 .laba button.right {
     margin-left: 20px;
+    background: url(../page1/images/left.svg) no-repeat;
+    background-position: center;
+    transition: 0.6s;
+}
+
+.laba button.right:hover {
+
+    border: 2px solid #1E398F;
+    background: url(../page1/images/arr_hover.svg) no-repeat #1E398F;
+    background-position: center;
+    transition: 0.6s;
+}
+
+.laba button.left:hover {
+
+    border: 2px solid #1E398F;
+    background: url(../page1/images/arr_hover.svg) no-repeat #1E398F;
+    transform: rotate(180deg);
+    background-position: center;
+    transition: 0.6s;
 }
 
 .main_part {
@@ -168,8 +193,7 @@ h1 {
 
 /* footer */
 footer {
-    width: 592px;
-    height: 1024.21px;
+
     margin: 55.79px 98px 0 0;
     display: flex;
     flex-direction: column;
@@ -207,6 +231,7 @@ footer {
     padding: 10px;
     background: #1E398F;
     border-radius: 8px;
+    border: #1E398F;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -214,6 +239,17 @@ footer {
     line-height: 23px;
     color: #fff;
     margin-left: 60px;
+    transition: 0.6s;
+}
+
+
+
+
+.text button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.6s;
+
 }
 
 .ready img {
@@ -222,10 +258,23 @@ footer {
 }
 
 .boy {
-    width: 533.32px;
+    width: 619px;
     height: 750px;
-
+    overflow: hidden;
     margin: 26px 0 0 59px;
+    position: relative;
+
+}
+
+.boy-start {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.start-boy {
+    margin-top: -150px;
+    margin-left: -80px;
 }
 
 .arrow {

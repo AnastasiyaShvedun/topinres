@@ -15,6 +15,28 @@ body {
     overflow: hidden;
 }
 
+.back_arrow {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 12px;
+    top: 7px;
+    padding-top: 3px;
+    background: url(../aims/images/back.svg ) no-repeat #1E398F;
+    background-position: center;
+    border: 1px solid #1E398F;
+    border-radius: 100%;
+    transition: 0.6s;
+}
+
+
+.back_arrow:hover {
+    border: 1px solid #CEDAFF;
+    background: url(../aims/images/back_hover.svg) no-repeat #CEDAFF;
+    background-position: center;
+    transition: 0.6s;
+}
+
 header {
     width: 151px;
     height: 1023.75px;
@@ -65,34 +87,37 @@ ul {
     border-radius: 14px;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
     text-align: justify;
     padding: 45px 50px;
-    margin-bottom: 18.8px;
+    margin-bottom: 19px;
+
+
 }
 
 .types {
-
     width: 758px;
-    height: 676px;
+    height: 522px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    text-align: justify;
     margin-left: 50px;
+    text-align: justify;
 }
 
 p {
+
+
     padding-bottom: 35px;
 }
 
 strong {
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 32px;
     line-height: 38px;
 }
 
@@ -121,36 +146,55 @@ strong {
     position: absolute;
     margin: 19px 0 153px 337px;
     z-index: -1;
+    height: 650px;
 }
 
 .ampl,
 .frequency,
-.phase {
-    height: 161.4px;
-    width: 534;
+.phase,
+.sqr {
+    height: 116px;
+    width: 385px;
     background: #F5F5F7;
     border-radius: 14px;
-    margin-bottom: 25px;
+    margin-left: 144px;
+    margin-bottom: 32px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-
+    padding: 25px 88px;
 }
 
 .ampl {
-    margin-top: 56px;
-    padding: 48px 161px;
+    margin-top: 55px;
 }
 
-.frequency {
-    padding: 48px 200px;
+.arr1,
+.arr2,
+.arr3 {
+    width: 32.27px;
+    height: 108.77px;
 }
 
-.phase {
-    padding: 46px 190px;
+.arr1 {
+    position: absolute;
+    top: 435px;
+    left: 1680px;
+}
+
+.arr2 {
+    position: absolute;
+    top: 595px;
+    left: 1680px;
+}
+
+.arr3 {
+    position: absolute;
+    top: 747px;
+    left: 1680px;
 }
 
 .next_page {
@@ -161,12 +205,20 @@ strong {
     height: 59.34px;
     background: #1E398F;
     border-radius: 8px;
+    border: #1E398F;
     color: #fff;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 23px
+    line-height: 23px;
+    transition: 0.6s;
+}
+
+.next_page:hover {
+    background: #000;
+    color: #fff;
+    transition: 0.6s;
 }
 
 a.tooltip span {

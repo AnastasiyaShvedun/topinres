@@ -15,6 +15,33 @@ body {
     overflow: hidden;
 }
 
+.back_arrow {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 12px;
+    top: 7px;
+    padding-top: 3px;
+    background: url(../aims/images/back.svg ) no-repeat #1E398F;
+    background-position: center;
+    border: 1px solid #1E398F;
+    border-radius: 100%;
+    transition: 0.6s;
+}
+
+
+.back_arrow:hover {
+    border: 1px solid #CEDAFF;
+    background: url(../aims/images/back_hover.svg) no-repeat #CEDAFF;
+    background-position: center;
+    transition: 0.6s;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px #1E398F solid;
+}
+
 header {
     width: 151px;
     height: 1023.75px;
@@ -96,6 +123,215 @@ h2 {
     margin-top: 14px;
 }
 
+/* scheme */
+.rectangle1,
+.rectangle2,
+.rectangle3 {
+    height: 100px;
+    width: 205px;
+    background: rgba(30, 57, 143, 0.19);
+    border-radius: 23px;
+    padding: 29px 83px;
+
+}
+
+.rectangle1 {
+    position: absolute;
+    top: 234px;
+    left: 327px;
+}
+
+.rectangle2 {
+    position: absolute;
+    top: 403px;
+    left: 327px;
+}
+
+.rectangle3 {
+    position: absolute;
+    top: 343px;
+    left: 710px;
+}
+
+.key {
+    position: absolute;
+    top: 261px;
+    left: 532px;
+}
+
+.circle {
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sqr {
+    padding-top: 10px;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.elements {
+    width: 610px;
+    height: 93px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 33px 43px 13px 0;
+}
+
+.elements h2 {
+    width: 128px;
+    margin-top: 22px;
+}
+
+.gen1,
+.gen2 {
+    width: 130px;
+
+}
+
+.oscil {
+    width: 155px
+}
+
+.get-signal {
+    width: 834px;
+    height: 308.4px;
+    margin-top: 22px;
+}
+
+.get-signal h2 {
+    margin-bottom: 23px;
+}
+
+.signal {
+    width: 524px;
+    height: 259.2px;
+    background: linear-gradient(134.98deg, rgba(255, 255, 255, 0.485714) -7.37%, rgba(255, 255, 255, 0) 25.24%, rgba(255, 255, 255, 0.452055) 39.42%, rgba(255, 255, 255, 0.465753) 73.44%, #FFFFFF 128.74%);
+    border-radius: 23px;
+    padding: 22px 2px 20px 25px;
+}
+
+.values {
+    width: 288px;
+    height: 260px;
+    position: absolute;
+    top: 729px;
+    left: 841px;
+}
+
+.enter h3 {
+    width: 154px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 7px;
+
+}
+
+.enter {
+    width: 288px;
+    height: 71px;
+    background: linear-gradient(108.52deg, rgba(255, 255, 255, 0.485714) 19.53%, rgba(255, 255, 255, 0.452055) 38.57%, #FFFFFF 74.91%, rgba(255, 255, 255, 0) 74.91%, rgba(255, 255, 255, 0.465753) 74.91%);
+    border-radius: 8px;
+    padding: 9px 13px;
+
+}
+
+[data-tooltip]::after {
+    width: 179px;
+    height: 35.5px;
+    content: attr(data-tooltip);
+    opacity: 0;
+    transition: 0, 6s;
+    pointer-events: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    top: -40px;
+    left: 109px;
+    background: url(../amplitude/images/Rectangle\ 52.svg);
+    padding: 8px 15px;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+
+.enter input {
+    width: 48px;
+    height: 27.12px;
+    background: rgba(30, 57, 143, 0.25);
+    border-radius: 3px;
+}
+
+.slider {
+    width: 118px;
+    height: 172.26px;
+    margin: 16px 88px 0 82px;
+    display: flex;
+    flex-direction: row;
+    gap: 37px;
+
+}
+
+.first,
+.second,
+.third {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slider h3 {
+    margin: 0;
+    width: auto;
+}
+
+.x {
+    position: absolute;
+    top: 180px;
+    left: 25px;
+
+}
+
+.f {
+    position: absolute;
+    top: 180px;
+    left: 75px;
+
+}
+
+.y {
+    position: absolute;
+    top: 180px;
+    left: 125px;
+
+}
+
+.slider input {
+    transform: rotate(-90deg);
+
+}
+
+/* infa */
 .knowledge {
     margin: 45px 68px 46px 71px;
 }
@@ -198,19 +434,6 @@ ol {
     line-height: 23px;
 }
 
-.next_page {
-    margin: 25px 0;
-    width: 111.09px;
-    height: 37.66px;
-    background: #1E398F;
-    border-radius: 8px;
-    color: #fff;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 15px;
-}
 
 .menu a {
     color: #1E398F;
