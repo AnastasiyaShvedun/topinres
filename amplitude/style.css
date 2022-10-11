@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: row;
     color: #1E398F;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .back_arrow {
@@ -505,4 +505,89 @@ a.tooltip:hover span.aaa {
     background: #ffffff;
     border: 1px solid #cccccc;
     color: #1E398F;
+}
+
+
+.one_0 {
+    position: absolute;
+    top: 877px;
+    left: 348px;
+}
+
+.one_1 {
+    position: absolute;
+
+    left: 348px;
+    top: 848px;
+}
+
+
+
+#one_zero,
+#one_one,
+#two_zero,
+#two_one,
+#three_zero,
+#three_one,
+#four_zero,
+#four_one,
+#five_zero,
+#five_one {
+    display: none;
+}
+
+
+
+.one_0,
+.two_0,
+.three_0,
+.four_0,
+.five_0 {
+    position: absolute;
+    top: 877px;
+
+}
+
+
+.one_1,
+.two_1,
+.three_1,
+.four_1,
+.five_1 {
+    position: absolute;
+    top: 848px;
+    width: 52px;
+}
+
+.one_0 {
+    position: absolute;
+    top: 877px;
+    left: 348px;
+}
+
+.one_1 {
+    position: absolute;
+
+    left: 348px;
+    top: 848px;
+}
+
+.two_0,
+.two_1 {
+    left: 398px;
+}
+
+.three_0,
+.three_1 {
+    left: 448px;
+}
+
+.four_0,
+.four_1 {
+    left: 498px;
+}
+
+.five_0,
+.five_1 {
+    left: 548px;
 }
