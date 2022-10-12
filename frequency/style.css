@@ -72,8 +72,20 @@ ul {
     list-style-type: none;
 }
 
+.logo_menu {
+    width: 63px;
+    height: 22px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 77.8%;
+    margin-left: 15px;
+    color: #D3E5FF;
+}
+
 .logout {
-    margin: 18px 30px;
+    margin: 18px 22px;
 }
 
 /* back */
