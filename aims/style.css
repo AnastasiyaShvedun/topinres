@@ -88,11 +88,12 @@ ul {
 .next_page {
     position: absolute;
     top: 1000px;
-    left: 1737px;
+    left: 1695px;
     width: 197.81px;
     height: 59.34px;
     background: #1E398F;
     border-radius: 8px;
+    border: none;
     color: #fff;
     font-family: 'Roboto';
     font-style: normal;
@@ -108,52 +109,9 @@ ul {
     transition: 0.6s;
 }
 
-a.tooltip span {
-    display: none;
-    padding: 2px 3px;
-    margin-left: 8px;
-    width: 130px;
-}
-
-a.tooltip:hover span {
-    display: block;
-    position: absolute;
-    top: 330px;
-    left: 100px;
-    height: 28.363636016845703px;
-    width: 100px;
-    border-radius: 4px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    color: #1E398F;
-}
-
-a.tooltip:hover span.aaa {
-    display: block;
-    position: absolute;
-    top: 540px;
-    left: 100px;
-    height: 28.363636016845703px;
-    width: 100px;
-    border-radius: 4px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    color: #1E398F;
-}
 
 /* main */
+
 section {
     background-color: #F5F5F7;
 }
@@ -169,73 +127,237 @@ h2 {
 
 }
 
-.order li,
+.order li {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 338;
+    font-size: 28px;
+    line-height: 33px;
+}
+
 .literature li {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 338;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 28px;
+
     letter-spacing: -0.06em;
-    font-feature-settings: 'tnum' on, 'lnum' on, 'kern' off;
+
 
     font-stretch: 100;
 }
 
-.goals p,
+.goals p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+}
+
 .report li {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
-    font-size: 32px;
-    line-height: 47px;
+    font-size: 24px;
+    line-height: 30px;
 }
 
 .column1 {
-    width: 888px;
-    height: 971px;
-    margin: 42px 35px 67px 77px;
+    width: 935px;
+    height: 997px;
+
+    margin: 36px 32px 47px 37px;
 }
 
 section {
-    margin-bottom: 22px;
+    margin-bottom: 35px;
     border-radius: 14px;
 }
 
 .goals {
-    width: 879.74px;
+    width: 935px;
     height: 263px;
-    padding: 40px 60px;
+    padding: 40px 25px;
 }
 
 section li {
-    margin-left: 35px;
+    margin-left: 30px;
 }
 
 .order {
-    width: 879.74px;
-    height: 306px;
-    padding: 30px 60px;
+    width: 935px;
+    height: 321px;
+    padding: 30px 25px;
 }
 
+.order a {
+    color: #1E398F;
+    text-decoration: none;
+    border-bottom: 1px #1E398F solid;
+}
 
 .literature {
-    width: 875.61px;
-    height: 358px;
+    width: 935px;
+    height: 343px;
     padding-top: 25px;
-    padding-left: 60px;
+
+    padding-left: 38px;
 }
 
+.report li {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+}
 
 .report {
-    width: 657px;
-    height: 735px;
-    padding: 68px 37px;
-    margin: 172px 45px 0 0;
+    width: 619px;
+    height: 562px;
+    padding: 29px 21px;
+    margin: 36px 71px 0 0;
 }
 
 .brain {
     position: absolute;
-    top: 856px;
-    left: 1754px;
+    top: 0px;
+    left: 1052px;
+}
+
+[data-tooltip-2]::after {
+    width: 120px;
+    height: 40px;
+    content: attr(data-tooltip-2);
+    opacity: 0;
+    transition: 0, 6s;
+    pointer-events: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    text-align: center;
+    color: #1E398F;
+    position: absolute;
+    top: 330px;
+    left: 96px;
+    z-index: 2;
+    background: #D3E5FF;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+[data-tooltip-2]:hover::after {
+    opacity: 1;
+}
+
+[data-tooltip-1]::after {
+    width: 110px;
+    height: 40px;
+    content: attr(data-tooltip-1);
+    opacity: 0;
+    transition: 0, 6s;
+    pointer-events: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    text-align: center;
+    color: #1E398F;
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    z-index: 2;
+    background: #D3E5FF;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+[data-tooltip-1]:hover::after {
+    opacity: 1;
+}
+
+[data-tooltip-3]::after {
+    width: 110px;
+    height: 40px;
+    content: attr(data-tooltip-3);
+    opacity: 0;
+    transition: 0, 6s;
+    pointer-events: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    text-align: center;
+    color: #1E398F;
+    position: absolute;
+    top: 442px;
+    left: 100px;
+    z-index: 2;
+    background: #D3E5FF;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+[data-tooltip-3]:hover::after {
+    opacity: 1;
+}
+
+[data-tooltip-4]::after {
+    width: 125px;
+    height: 30px;
+    content: attr(data-tooltip-4);
+    opacity: 0;
+    transition: 0, 6s;
+    pointer-events: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    text-align: center;
+    color: #1E398F;
+    position: absolute;
+    top: 555px;
+    left: 89px;
+    z-index: 2;
+    background: #D3E5FF;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+[data-tooltip-4]:hover::after {
+    opacity: 1;
+}
+
+[data-tooltip-5]::after {
+    width: 125px;
+    height: 40px;
+    content: attr(data-tooltip-5);
+    opacity: 0;
+    transition: 0, 6s;
+    pointer-events: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    text-align: center;
+    color: #1E398F;
+    position: absolute;
+    top: 915px;
+    left: 91px;
+    z-index: 2;
+    background: #D3E5FF;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+
+[data-tooltip-5]:hover::after {
+    opacity: 1;
 }
