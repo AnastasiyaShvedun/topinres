@@ -138,9 +138,9 @@ h2 {
     margin-top: 14px;
 }
 
-.rectangle1,
-.rectangle2,
-.rectangle3 {
+#rectangle1,
+#rectangle2,
+#rectangle3 {
     height: 86px;
     width: 191px;
     background: rgba(30, 57, 143, 0.19);
@@ -149,19 +149,19 @@ h2 {
 
 }
 
-.rectangle1 {
+#rectangle1 {
     position: absolute;
     top: 223px;
     left: 324px;
 }
 
-.rectangle2 {
+#rectangle2 {
     position: absolute;
     top: 371px;
     left: 324px;
 }
 
-.rectangle3 {
+#rectangle3 {
     position: absolute;
     top: 317px;
     left: 690px;
@@ -208,14 +208,29 @@ h2 {
 
 }
 
-.gen1,
+.gen1 {
+    height: 83.54669952392578px;
+    width: 139px;
+    position: absolute;
+    top: 30px;
+    left: -30px;
+}
+
 .gen2 {
-    width: 130px;
+    height: 83.54669952392578px;
+    width: 139px;
+    position: absolute;
+    top: 130px;
+    left: -30px;
 
 }
 
 .oscil {
-    width: 155px
+    position: absolute;
+    top: 230px;
+    left: -30px;
+    height: 80.85164642333984px;
+    width: 155px;
 }
 
 /* signal */
@@ -312,6 +327,8 @@ h2 {
     text-align: justify;
     padding: 6px;
     color: #1E398F;
+    box-shadow: 2px 2px 20px 1px #828AA4;
+
 }
 
 .frame button:hover {
@@ -332,13 +349,13 @@ h2 {
     color: #1E398F;
 }
 
+
+
 .slider {
-    width: 118px;
-    height: 172.26px;
-    margin: 16px 88px 0 82px;
+
     display: flex;
     flex-direction: row;
-    gap: 37px;
+
 
 }
 
@@ -350,10 +367,7 @@ h2 {
 
 }
 
-.slider h3 {
-    margin: 0;
-    width: auto;
-}
+
 
 #x {
     position: absolute;
@@ -362,10 +376,15 @@ h2 {
 
 }
 
+
+#block {
+    position: absolute;
+}
+
 #f {
     position: absolute;
-    top: 350px;
-    left: 75px;
+    top: 340px;
+    left: -58px;
 
 }
 
@@ -381,6 +400,27 @@ h2 {
 
 }
 
+#butt {
+    position: absolute;
+    top: 415px;
+    left: -15px;
+    width: 49px;
+    height: 20px;
+    background: #5D75C3;
+    border-radius: 13.5px;
+}
+
+.what_to_do {
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 150px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+}
 
 /* infa */
 .knowledge {

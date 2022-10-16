@@ -43,25 +43,28 @@
         <h4><a href="../page1/index.html">главная </a>><a href="../page2/index.html"> виды модуляций</a> ><u>
                 амплитудная манипуляция</u></h4>
         <div class="schematic">
+
             <h2>Составление схемы:</h2>
             <div class="scheme">
-                <div class="rectangle1">
+                <div id="rectangle1" class="droppable">
                     <div class="circle"><img src="../amplitude/images/Line.svg" alt="line"></div>
                 </div>
-                <div class="rectangle2">
+                <div id="rectangle2" class="droppable">
                     <div class="circle"><img src="../amplitude/images/Line.svg" alt="line"></div>
                 </div>
-                <div class="key"><img src="../amplitude/images/key.svg" alt="key"></div>
-                <div class="rectangle3">
+
+                <div><img src="../amplitude/images/key.svg" alt="key" class="key"></div>
+                <div id="rectangle3" class="droppable">
                     <div class="sqr"><img src="../amplitude/images/flashlight.svg" alt="flash"></div>
                 </div>
             </div>
         </div>
         <div class="elements">
             <h2>Элементы:</h2>
-            <img src="../amplitude/images/генератор 1.svg" alt="gen" class="gen1">
-            <img src="../amplitude/images/генератор 1.svg" alt="gen" class="gen2">
-            <img src="../amplitude/images/осциллограф готовый 1.svg" alt="gen" class="oscil">
+            <div class="draggable"><img src="../amplitude/images/генератор 2.svg" alt="gen" class="gen1"></div>
+            <div class="draggable"><img src="../amplitude/images/генератор 2.svg" alt="gen" class="gen2"></div>
+            <div class="draggable"><img src="../amplitude/images/осциллограф готовый 1.svg" alt="gen" class="oscil">
+            </div>
         </div>
         <div class="get-signal">
             <h2>Полученный сигнал:</h2>
@@ -87,16 +90,20 @@
                     </div>
                 </div>
                 <div class="slider">
-                    <div class="first">
+                    <!-- <div class="first">
                         <h3>X</h3> <input type="range" min="0" max="100" step="1" value="50" id="x">
-                    </div>
+                    </div> -->
                     <div class="second">
                         <h3>A</h3> <input type="range" min="5" max="20" step="1" value="20" id="f">
                     </div>
-                    <div class="third">
+                    <!-- <div class="third">
                         <h3>Y</h3><input type="range" min="0" max="100" step="1" value="50" id="y">
+                    </div> -->
+                    <button id="butt">Ok </button>
+                    <div class="what_to_do">Передвигая ползунок левой кнопкой мыши, выберите амплитуду исходного
+                        сигнала.
+                        После нажмите кнопку "Ок" для дальнейшей манипуляции.
                     </div>
-                    <button id="butt">ok </button>
                 </div>
             </div>
         </div>
@@ -115,13 +122,12 @@
             </ul>
             <h3>Проведение эксперимента</h3>
             <ol>
-                <li>При помощи курсора, зажав правую клавишу мыши поместите элементы структорной схемы на свои
+                <li>При помощи курсора, зажав левую клавишу мыши поместите элементы структорной схемы на свои
                     правильные
                     места.</li>
-                <li>Нажмите на электронный ключ с целью получения сигнала на осциллографе.</li>
-                <li>В свободные ячейки возле экрана осциллографа введите произвольную комбинацию нулей и единиц, для
-                    получения
-                    модулированного сигнала.</li>
+                <!-- <li>Нажмите на электронный ключ с целью получения сигнала на осциллографе.</li> -->
+                <li>С помощью ползунка установите значение для амплитуда входного сигнала.</li>
+                <li>Читая инструкции, последовательно нажимайте на кнопки.</li>
             </ol>
 
         </section>
