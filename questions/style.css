@@ -143,9 +143,6 @@ p {
     padding: 10px 10px;
 }
 
-[data-tooltip-2]:hover::after {
-    opacity: 1;
-}
 
 [data-tooltip-1]::after {
     width: 110px;
@@ -170,9 +167,6 @@ p {
     padding: 10px 10px;
 }
 
-[data-tooltip-1]:hover::after {
-    opacity: 1;
-}
 
 [data-tooltip-3]::after {
     width: 110px;
@@ -195,10 +189,6 @@ p {
     background: #D3E5FF;
     border-radius: 8px;
     padding: 10px 10px;
-}
-
-[data-tooltip-3]:hover::after {
-    opacity: 1;
 }
 
 [data-tooltip-4]::after {
@@ -224,9 +214,7 @@ p {
     padding: 10px 10px;
 }
 
-[data-tooltip-4]:hover::after {
-    opacity: 1;
-}
+
 
 [data-tooltip-5]::after {
     width: 125px;
@@ -251,6 +239,10 @@ p {
     padding: 10px 10px;
 }
 
+[data-tooltip-1]:hover::after,
+[data-tooltip-2]:hover::after,
+[data-tooltip-3]:hover::after,
+[data-tooltip-4]:hover::after,
 [data-tooltip-5]:hover::after {
     opacity: 1;
 }

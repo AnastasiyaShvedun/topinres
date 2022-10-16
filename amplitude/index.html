@@ -66,42 +66,37 @@
         <div class="get-signal">
             <h2>Полученный сигнал:</h2>
             <div class="signal">
-                <img src="../amplitude/images/Group 73.svg" alt="signal">
-
-
-
-                <img src="../amplitude/images/0.svg" alt="0" id="one_zero">
-                <img src="../amplitude/images/1.svg" alt="0" id="one_one">
-                <img src="../amplitude/images/0.svg" alt="0" id="two_zero">
-                <img src="../amplitude/images/1.svg" alt="0" id="two_one">
-                <img src="../amplitude/images/0.svg" alt="0" id="three_zero">
-                <img src="../amplitude/images/1.svg" alt="0" id="three_one">
-                <img src="../amplitude/images/0.svg" alt="0" id="four_zero">
-                <img src="../amplitude/images/1.svg" alt="0" id="four_one">
-                <img src="../amplitude/images/0.svg" alt="0" id="five_zero">
-                <img src="../amplitude/images/1.svg" alt="0" id="five_one">
-
+                <img src="../amplitude/images/background.svg" alt="signal">
+                <canvas id="canvas_1" width="407" height="71"></canvas>
+                <canvas id="canvas_2" width="407" height="68"></canvas>
+                <canvas id="canvas_3" width="407" height="68"></canvas>
+                <canvas id="canvas_4" width="407" height="34"></canvas>
+                <canvas id="canvas_5" width="407" height="80"></canvas>
             </div>
-            <div class="values">
-                <div class="enter" data-tooltip="Введите корректное значение">
-                    <h3>Ввод значений (0//1)</h3>
-                    <input type="text" id="first-number">
-                    <input type="text" id="second-number">
-                    <input type="text" id="third-number">
-                    <input type="text" id="fourth-number">
-                    <input type="text" id="fifth-number">
-                    <input id="butt" type="button" value="Ok" />
+            <div class="right_column">
+                <div class="stages">
+                    <h3>Этапы преобразования сигнала:</h3>
+                    <div class="frame">
+                        <div class="buttons">
+                            <button id="stage_1">Дискретизация</button>
+                            <button id="stage_2">Квантование</button>
+                            <button id="stage_3">Цифр. сигнал</button>
+                            <button id="stage_4">Манипуляция</button>
+                        </div>
+                        <p>Постепенно нажимайте на кнопки слева для получения сигнала.</p>
+                    </div>
                 </div>
                 <div class="slider">
                     <div class="first">
-                        <h3>X</h3> <input type="range" min="0" max="100" step="1" value="50" class="x">
+                        <h3>X</h3> <input type="range" min="0" max="100" step="1" value="50" id="x">
                     </div>
                     <div class="second">
-                        <h3>f</h3> <input type="range" min="0" max="100" step="1" value="50" class="f">
+                        <h3>A</h3> <input type="range" min="5" max="20" step="1" value="20" id="f">
                     </div>
                     <div class="third">
-                        <h3>Y</h3><input type="range" min="0" max="100" step="1" value="50" class="y">
+                        <h3>Y</h3><input type="range" min="0" max="100" step="1" value="50" id="y">
                     </div>
+                    <button id="butt">ok </button>
                 </div>
             </div>
         </div>
