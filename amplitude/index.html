@@ -53,7 +53,8 @@
                     <div class="circle"><img src="../amplitude/images/Line.svg" alt="line"></div>
                 </div>
 
-                <div><img src="../amplitude/images/key.svg" alt="key" class="key"></div>
+                <div><img src="../amplitude/images/key.svg" alt="key" class="key-1"></div>
+                <img src="../amplitude/images/key_.svg" alt="key" id="key">
                 <div id="rectangle3" class="droppable">
                     <div class="sqr"><img src="../amplitude/images/flashlight.svg" alt="flash"></div>
                 </div>
@@ -74,7 +75,7 @@
                 <canvas id="canvas_2" width="407" height="68"></canvas>
                 <canvas id="canvas_3" width="407" height="68"></canvas>
                 <canvas id="canvas_4" width="407" height="34"></canvas>
-                <canvas id="canvas_5" width="407" height="80"></canvas>
+                <canvas id="canvas_5" width="407" height="140"></canvas>
             </div>
             <div class="right_column">
                 <div class="stages">
@@ -90,20 +91,25 @@
                     </div>
                 </div>
                 <div class="slider">
-                    <!-- <div class="first">
-                        <h3>X</h3> <input type="range" min="0" max="100" step="1" value="50" id="x">
-                    </div> -->
-                    <div class="second">
-                        <h3>A</h3> <input type="range" min="5" max="20" step="1" value="20" id="f">
+                    <div class="input_slider">
+                        <h3>t</h3>
+                        <h4 class="min">0,2 мс</h4>
+                        <input type="range" min="0.5" max="10" step="0.1" value="0.5" id="f">
+                        <h4 class="max">4,4с</h4>
                     </div>
-                    <!-- <div class="third">
-                        <h3>Y</h3><input type="range" min="0" max="100" step="1" value="50" id="y">
-                    </div> -->
-                    <button id="butt">Ok </button>
-                    <div class="what_to_do">Передвигая ползунок левой кнопкой мыши, выберите амплитуду исходного
-                        сигнала.
-                        После нажмите кнопку "Ок" для дальнейшей манипуляции.
+                    <div class="what_to_do">
+                        <p>
+                            Передвигая ползунок левой кнопкой мыши, выберите частоту манипулированного
+                            сигнала.</p>
+                        <div class="characteristic">
+                            <ul>
+                                <li>Аплитуда исходного сигнала - 1 В.</li>
+                                <li>Частота несущей - 1 кГц.</li>
+                                <li>Частота дискретизации - 0,1 кГц.</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

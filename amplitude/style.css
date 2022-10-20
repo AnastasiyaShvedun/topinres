@@ -73,7 +73,7 @@ nav {
 
 }
 
-ul {
+header ul {
     display: flex;
     flex-direction: column;
     gap: 75px;
@@ -167,10 +167,18 @@ h2 {
     left: 690px;
 }
 
-.key {
+.key-1 {
     position: absolute;
     top: 246px;
-    left: 515px;
+    left: 514px;
+}
+
+#key {
+    position: absolute;
+    top: 326px;
+    left: 599px;
+
+
 }
 
 .circle {
@@ -274,7 +282,7 @@ h2 {
 
 #canvas_5 {
     position: absolute;
-    top: 900px;
+    top: 871px;
     left: 343px;
 }
 
@@ -282,7 +290,7 @@ h2 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 549px;
+    top: 521px;
     left: 841px;
 }
 
@@ -352,74 +360,54 @@ h2 {
 
 
 .slider {
-
     display: flex;
     flex-direction: row;
-
-
+    margin-top: 20px;
+    gap: 10px;
 }
 
-.first,
-.second,
-.third {
+.input_slider {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 
+    height: 200px;
 }
 
-
-
-#x {
-    position: absolute;
-    top: 350px;
-    left: 25px;
-
-}
-
-
-#block {
-    position: absolute;
-}
-
-#f {
-    position: absolute;
-    top: 340px;
-    left: -58px;
-
-}
-
-#y {
-    position: absolute;
-    top: 350px;
-    left: 125px;
-
-}
-
-.slider input {
+input[type="range"] {
     transform: rotate(-90deg);
-
+    position: absolute;
+    top: 370px;
+    left: -50px;
 }
 
-#butt {
+.min {
     position: absolute;
-    top: 415px;
-    left: -15px;
-    width: 49px;
-    height: 20px;
-    background: #5D75C3;
-    border-radius: 13.5px;
+    top: 295px;
+    left: -4px;
+}
+
+.max {
+    position: absolute;
+    top: 450px;
+    left: 2px;
 }
 
 .what_to_do {
-    margin-left: 50px;
-    margin-top: 30px;
-    width: 150px;
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 180px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     text-align: justify;
+}
+
+.what_to_do ul {
+    gap: 5px;
+    margin-top: 10px;
 }
 
 /* infa */
