@@ -203,39 +203,39 @@ DragManager.onDragEnd = function (dragObject, dropElem) {
                     ctx4.lineTo(width4 * 9, canvas4.height);
                     ctx4.stroke();
 
-                    // stage_4.onclick = function () {
-                    //     let input = document.getElementById("f").value;
-                    //     let width4 = 45;
-                    //     ctx5.lineWidth = 3;
-                    //     ctx5.strokeStyle = " #AE00B1";
+                    stage_4.onclick = function () {
+                        let input = document.getElementById("f").value;
+                        let width4 = 45;
+                        ctx5.lineWidth = 3;
+                        ctx5.strokeStyle = " #AE00B1";
 
-                    //     ctx5.stroke()
-                    //     for (let j = 0; j < 200; j += 2) {
-                    //         ctx5.beginPath();
-                    //         cx = 18 * input * j;
-                    //         cy = canvas5.height / 2;
-                    //         ctx5.moveTo(cx, cy);
-                    //         for (i = 1; i <= 18; i++) {
-                    //             x = i * input;
-                    //             y = inp_1 * Math.sin(30 * i / 180 * Math.PI);
-                    //             ctx5.lineTo(cx + x, cy + y);
-                    //         }
-                    //         ctx5.stroke()
-                    //         for (let z = 1; z < 200; z += 2) {
+                        ctx5.stroke()
+                        for (let j = 0; j < 200; j += 2) {
+                            ctx5.beginPath();
+                            cx = 18 * input * j;
+                            cy = canvas5.height / 2;
+                            ctx5.moveTo(cx, cy);
+                            for (i = 1; i <= 18; i++) {
+                                x = i * input;
+                                y = inp_1 * Math.sin(30 * i / 180 * Math.PI);
+                                ctx5.lineTo(cx + x, cy + y);
+                            }
+                            ctx5.stroke()
+                            for (let z = 1; z < 200; z += 2) {
 
-                    //             ctx5.beginPath();
-                    //             cx = 18 * input * z;
-                    //             cy = canvas5.height / 2;
-                    //             ctx5.moveTo(cx, cy);
-                    //             for (i = 1; i <= 18; i++) {
-                    //                 x = i * input;
-                    //                 y = inp_1 * 1.8 * Math.sin(-30 * i / 180 * Math.PI);
-                    //                 ctx5.lineTo(cx + x, cy + y);
-                    //             }
-                    //             ctx5.stroke()
-                    //         }
-                    //     }
-                    // }
+                                ctx5.beginPath();
+                                cx = 18 * input * z;
+                                cy = canvas5.height / 2;
+                                ctx5.moveTo(cx, cy);
+                                for (i = 1; i <= 18; i++) {
+                                    x = i * input;
+                                    y = inp_1 * 1.8 * Math.sin(-30 * i / 180 * Math.PI);
+                                    ctx5.lineTo(cx + x, cy + y);
+                                }
+                                ctx5.stroke()
+                            }
+                        }
+                    }
                 }
             }
 
@@ -245,36 +245,3 @@ DragManager.onDragEnd = function (dragObject, dropElem) {
 
     }
 };
-stage_4.onclick = function () {
-    let input = document.getElementById("f").value;
-    let width4 = 45;
-    ctx5.lineWidth = 3;
-    ctx5.strokeStyle = " #AE00B1";
-
-    ctx5.stroke()
-    for (let j = 0; j < 500; j += 2) {
-        ctx5.beginPath();
-        cx = 18 * input * j;
-        cy = canvas5.height / 2;
-        ctx5.moveTo(cx, cy);
-        for (i = 1; i <= 18; i++) {
-            x = i * input;
-            y = inp_1 * Math.sin(30 * i / 180 * Math.PI);
-            ctx5.lineTo(cx + x, cy + y);
-        }
-        ctx5.stroke()
-        for (let z = 1; z < 500; z += 2) {
-
-            ctx5.beginPath();
-            cx = 18 * input * z;
-            cy = canvas5.height / 2;
-            ctx5.moveTo(cx, cy);
-            for (i = 1; i <= 18; i++) {
-                x = i * input;
-                y = inp_1 * 1.8 * Math.sin(-30 * i / 180 * Math.PI);
-                ctx5.lineTo(cx + x, cy + y);
-            }
-            ctx5.stroke()
-        }
-    }
-}
