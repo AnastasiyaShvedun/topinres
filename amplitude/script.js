@@ -204,6 +204,7 @@ DragManager.onDragEnd = function (dragObject, dropElem) {
                     ctx4.stroke();
 
                     stage_4.onclick = function () {
+                        ctx5.clearRect(0, 0, 407, 140)
                         let input = document.getElementById("f").value;
                         let width4 = 45;
                         ctx5.lineWidth = 3;
@@ -238,10 +239,6 @@ DragManager.onDragEnd = function (dragObject, dropElem) {
                     }
                 }
             }
-
-
-
         }
-
     }
 };
