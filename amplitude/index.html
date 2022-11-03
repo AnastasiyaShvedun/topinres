@@ -46,37 +46,34 @@
 
             <h2>Составление схемы:</h2>
             <div class="scheme">
-                <div id="rectangle1" class="droppable">
-                    <div class="circle"><img src="../amplitude/images/Line.svg" alt="line"></div>
-                </div>
-                <div id="rectangle2" class="droppable">
-                    <div class="circle"><img src="../amplitude/images/Line.svg" alt="line"></div>
-                </div>
-
-                <div><img src="../amplitude/images/key.svg" alt="key" class="key-1"></div>
-                <img src="../amplitude/images/key_.svg" alt="key" id="key">
-                <div id="rectangle3" class="droppable">
-                    <div class="sqr"><img src="../amplitude/images/flashlight.svg" alt="flash"></div>
-                </div>
+                <img class="img-scheme" src="../amplitude/images/scheme.svg" alt="scheme">
+                <div id="rectangle1" class="droppable2">АЦП</div>
+                <div id="rectangle2" class="droppable3">Микро-<br>процессор</div>
+                <div id="rectangle3" class="droppable1">ЦАП</div>
+                <div id="rectangle4" class="droppable4">Фильтр НЧ</div>
+                <button id="play"><img src="../amplitude/images/play.svg" alt="play"></button>
             </div>
         </div>
-        <div class="elements">
-            <h2>Элементы:</h2>
-            <div class="draggable"><img src="../amplitude/images/генератор 2.svg" alt="gen" class="gen1"></div>
-            <div class="draggable"><img src="../amplitude/images/генератор 2.svg" alt="gen" class="gen2"></div>
-            <div class="draggable"><img src="../amplitude/images/осциллограф готовый 1.svg" alt="gen" class="oscil">
+        <div class="devices">
+            <h2>Устройства:</h2>
+            <div class="draggable1">
+                <img src="../amplitude/images/цап.svg" alt="wag">
             </div>
+            <div class="draggable2"><img data-tooltip_1="АЦП" src="../amplitude/images/ацп.svg" alt="fwg"></div>
+            <div class="draggable3"><img src="../amplitude/images/процессор.svg" alt="ghjw"></div>
+            <div class="draggable4"><img src="../amplitude/images/фнч.svg" alt="ayx"></div>
         </div>
         <div class="get-signal">
-            <h2>Полученный сигнал:</h2>
+            <h2>Полученные сигналы:</h2>
             <div class="signal">
-                <img src="../amplitude/images/Background.svg" alt="signal">
+                <img src="../amplitude/images/backgr.svg" alt="signal">
                 <canvas id="canvas_1" width="407" height="71"></canvas>
                 <canvas id="canvas_2" width="407" height="68"></canvas>
                 <canvas id="canvas_3" width="407" height="68"></canvas>
                 <canvas id="canvas_4" width="407" height="34"></canvas>
                 <canvas id="canvas_5" width="407" height="140"></canvas>
             </div>
+
             <div class="right_column">
                 <div class="stages">
                     <h3>Этапы преобразования сигнала:</h3>
@@ -84,32 +81,26 @@
                         <div class="buttons">
                             <button id="stage_1">Дискретизация</button>
                             <button id="stage_2">Квантование</button>
-                            <button id="stage_3">Цифр. сигнал</button>
+                            <button id="stage_3">Кодирование</button>
                             <button id="stage_4">Манипуляция</button>
                         </div>
                         <p>Постепенно нажимайте на кнопки слева для получения сигнала.</p>
                     </div>
                 </div>
                 <div class="slider">
-                    <div class="input_slider">
-                        <h3>t</h3>
-                        <h4 class="min">0,2 мс</h4>
-                        <input type="range" min="0.5" max="10" step="0.1" value="0.5" id="f">
-                        <h4 class="max">4,4с</h4>
-                    </div>
-                    <div class="what_to_do">
-                        <p>
-                            Передвигая ползунок левой кнопкой мыши, выберите частоту манипулированного
-                            сигнала.</p>
-                        <div class="characteristic">
-                            <ul>
-                                <li>Аплитуда исходного сигнала - 1 В.</li>
-                                <li>Частота несущей - 1 кГц.</li>
-                                <li>Частота дискретизации - 0,1 кГц.</li>
-                            </ul>
-                        </div>
-                    </div>
-
+                    <p>Передвигая ползунок левой кнопкой мыши, выберите частоту дискретизации и нажмите на
+                        кнопку “ОК”.</p>
+                    <ul>
+                        <li>Аплитуда исходного сигнала - 10 В. </li>
+                        <li>Частота несущей - 10 кГц.</li>
+                        <li>Частота дискретизации - 40 кГц.</li>
+                    </ul>
+                    <h3>Частота дискретизации</h3>
+                    <input type="range" min="0.5" max="8" step="0.1" value="4" id="Frequency">
+                    <button class="ok" id="butt1">OK</button>
+                    <h3>Время</h3>
+                    <input type="range" min="0.5" max="10" step="0.1" value="3" id="time">
+                    <button class="ok" id="butt2">OK</button>
                 </div>
             </div>
         </div>
@@ -120,22 +111,26 @@
             <h3>Оборудование (элементная база)
             </h3>
             <p>В левой части окна показано оборудование, необходимое для проведения работы: </p>
-
             <ul>
-                <li>Амплитудный генератор (2 шт.)</li>
-                <li>Электрический ключ</li>
-                <li>Осциллограф</li>
+                <li><b> Аналогово-цифровой преобразователь</b>(АЦП)</li>
+                <li><b> Цифро-аналоговый преобразователь</b>(ЦАП)</li>
+                <li><b> Микропроцессор</b>(<span class="micropr">
+                        отвечает за чтение и дешифрацию команд из основной памяти; чтение данных из
+                        основной
+                        памяти и регистров
+                        адаптеров внешних устройств; прием и обработку запросов и команд от адаптеров на обслуживание
+                        внешних устройств и др.</span>)</li>
+                <li><b> Фильтр низких частот</b>(ФНЧ)</li>
             </ul>
             <h3>Проведение эксперимента</h3>
             <ol>
                 <li>При помощи курсора, зажав левую клавишу мыши поместите элементы структорной схемы на свои
                     правильные места.</li>
+                <li>Нажмите на КНОПКУ ЗАПУСКА (<img src="../amplitude/images/start.svg" alt="play">) с целью получения
+                    сигнала графике.</li>
+                <li>Передвигая ползунки обратите внимание на изменение графиков, схематично себе заиллюстируйте
+                    результаты.</li>
 
-                <li>Нажмите на электронный ключ для получения сигнала.</li>
-
-                <li>Читая инструкции, последовательно нажимайте на кнопки для получения манипулироанного сигнала.</li>
-                <li>С помощью ползунка установите приемлимое значение времени, чтобы полностью рассмотреть
-                    полученный сигнал.</li>
             </ol>
 
         </section>
@@ -167,6 +162,114 @@
                     манипуляция</b></p>
             <a href="../frequency/index.html"><button class="next_page">Продолжить > </button></a>
         </section>
+    </div>
+
+    <div id="dicr" class="dickr"><img src="../amplitude/images/x.svg" alt="x" id="close1">
+
+        <div class="p1">
+            <p>
+                <strong>
+                    Дискретизация</strong> -
+                представление непрерывного аналогового сигнала последовательностью его значений (отсчетов). Эти отсчеты
+                берутся в
+                моменты времени, отделенные друг от друга интервалом, который называется шагом дискретизации. Величину,
+                обратную
+                интервалу между отсчетами, называют частотой дискретизации.
+
+            </p><img src="../amplitude/images/d1.svg" alt="d1">
+        </div>
+        <div class="p1"><img src="../amplitude/images/d2.svg" alt="d2">
+            <p>Отсчеты непрерывного сигнала следует брать
+                с такой частотой, чтобы успевать отследить
+                все, даже самые быстрые, изменения сигнала.
+                Иначе при восстановлении этого сигнала по
+                дискретным отсчетам часть информации
+                будет потеряна, и форма восстановленного
+                сигнала будет отличаться от формы исходного.
+            </p>
+        </div>
+        <p>Чтобы аналоговый сигнал можно было преобразовать в цифровой сигнал нужно следовать теореме Котельникова: Если
+            аналоговый
+            сигнал имеет ограниченный по ширине спектр, то он может быть восстановлен однозначно и без потерь по своим
+            дискретным
+            отсчетам, взятым с частотой, строго большей удвоенной верхней частоты.</p>
+
+
+    </div>
+    <div id="kvant" class="kvant">
+        <img src="../amplitude/images/x.svg" alt="x" id="close2">
+
+
+        <p>
+            <strong>
+                Квантование</strong>
+            — это процесс разбиения диапазона амплитуды сигнала на определенное количество уровней (шаги
+            квантования) и
+            округление значений, измеренных во время дискретизации, до ближайшего уровня:
+        </p>
+        <img src="../amplitude/images/formula1.svg" alt="f1">
+        <div class="p1">
+
+            <div class="kv-p1">
+                <p>Т.е. сигналы величиной от X1 до X2, условно
+                    приравнивается к определенному значению Xy.
+                    Данная формула позволяет вычислить кол-во
+                    уровней квантования:
+                    Если N — количество
+                    уровней квантования,
+                    n — разрядность, то:
+
+                </p> <img src="../amplitude/images/formula2.svg" alt="f2">
+            </div>
+            <img src="../amplitude/images/kv1.svg" alt="kv1">
+        </div>
+        <p>Обычно используют разрядности в 8, 12, 16 и 24 бит.</p>
+        <p>При n = 1 аудиосигнал превратится в азбуку Морзе: либо есть «стук», либо нету. Существует также разрядность
+            32 бит с
+            плавающей запятой. Обычный компактный Аудио-CD имеет разрядность 16 бит. Чем ниже разрядность, тем больше
+            округляются
+            значения и тем больше ошибка квантования.
+        </p>
+        <p><b>В нашей лаб работе возьмем разрядность 3, значит, количество уровней квантования— 8.
+            </b></p>
+    </div>
+    <div id="kod" class="kod"><img src="../amplitude/images/x.svg" alt="x" id="close3">
+        <p class="kod-p1"><strong> Процесс кодирования</strong> при формировании цифровых сигналов заключается в замене
+            значения
+            амплитуды каждого
+            дискретного
+            квантованного отсчета кодовой комбинацией двоичного кода. Причем кодируется не абсолютное значение
+            амплитуды, а <strong>номер
+                уровня квантования</strong>, которому соответствует данная амплитуда.
+        </p>
+        <div class="p1">
+            <div class="kod-p">
+                <p>Важной характеристикой кодера при этом
+                    является разрядность кодовой комбинации n.</p>
+                <p>На примере этой картинки рассмотрим, как
+                    получается цифровой сигнал.
+                </p>
+                <p>В данном примере битовая глубина (разрядность)
+                    равна 3, соответственно — 8 уровней квантования.
+                    Так как разрядность 3, то и соответственно цифр,
+                    кодирующий положение сигнала в данный момент
+                    времени 3, а, значит, для этого примера цифровой
+                    код будет выглядеть так:
+                </p>
+                <p>001 011 100 010 010 100 110 111 110
+                </p>
+            </div>
+            <img src="../amplitude/images/ko1.svg" alt="kod1">
+        </div>
+        <div class="kod-end">
+            <p>
+                А обьем записанной информации равен: 3*10=30 бит.
+            </p>
+            <p><b>Ступенчатая структура дискретизированного сигнала
+                    может быть сглажена с помощью фильтра нижних частот.</b> </p>
+
+            <img src="../amplitude/images/kod2.svg" alt="kod2">
+        </div>
     </div>
     <script src="../amplitude/script.js">
 
