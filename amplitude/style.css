@@ -36,7 +36,7 @@ body {
     top: 249px;
     left: 528px;
     background-color: #fff;
-    z-index: 10;
+    z-index: 20;
     border-radius: 65px;
     padding: 31px 17px 23px 37px;
 }
@@ -56,7 +56,7 @@ body {
     top: 249px;
     left: 528px;
     background-color: #fff;
-    z-index: 10;
+    z-index: 20;
     border-radius: 65px;
     padding: 44px 85px 0 40px;
 }
@@ -93,7 +93,7 @@ body {
     top: 249px;
     left: 528px;
     background-color: #fff;
-    z-index: 10;
+    z-index: 20;
     border-radius: 65px;
     padding: 26px 0 0 28px;
 }
@@ -371,6 +371,10 @@ h2 {
     padding-top: 50px;
 }
 
+.draggable {
+    z-index: 0;
+}
+
 #play {
     position: absolute;
     top: 341px;
@@ -580,6 +584,17 @@ h2 {
     text-align: justify;
 }
 
+.f1,
+.t1 {
+    display: flex;
+    flex-direction: row;
+    width: 302px;
+}
+
+.t1 {
+    margin-left: 38px;
+}
+
 .ok {
     width: 44px;
     height: 17px;
@@ -594,6 +609,7 @@ h2 {
     border-radius: 8px;
     padding: 2px 13px;
     color: #1E398F;
+    margin-left: 5px;
 }
 
 .ok:hover {

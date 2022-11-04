@@ -168,7 +168,7 @@ let inp_1 = 30;
 //     dragObject.avatar.rollback1();
 // };
 // // перенос элементов 2
-// var DragManager = new function () {
+// var DragManager2 = new function () {
 
 //     var dragObject = {};
 
@@ -198,7 +198,7 @@ let inp_1 = 30;
 //                 dragObject = {};
 //                 return;
 //             }
-//             var coords = getCoords(dragObject.avatar);
+//             var coords = getCoords2(dragObject.avatar);
 //             dragObject.shiftX = dragObject.downX - coords.left;
 //             dragObject.shiftY = dragObject.downY - coords.top;
 
@@ -275,12 +275,12 @@ let inp_1 = 30;
 //     document.onmousedown = onMouseDown;
 
 //     this.onDragEnd = function (dragObject, dropElem) { };
-//     this.onDragCancel = function (dragObject) { };
+//     this.onDragCancel2 = function (dragObject) { };
 
 // };
 
 
-// function getCoords(elem) {
+// function getCoords2(elem) {
 //     var box = elem.getBoundingClientRect();
 
 //     return {
@@ -289,10 +289,11 @@ let inp_1 = 30;
 //     };
 
 // }
-// DragManager.onDragCancel = function (dragObject) {
+// DragManager2.onDragCancel2 = function (dragObject) {
 //     dragObject.avatar.rollback();
 // };
-// // перенос элементов 3
+
+// // // перенос элементов 3
 // var DragManager = new function () {
 
 //     var dragObject = {};
