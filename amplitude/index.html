@@ -47,21 +47,21 @@
             <h2>Составление схемы:</h2>
             <div class="scheme">
                 <img class="img-scheme" src="../amplitude/images/scheme.svg" alt="scheme">
-                <div id="rectangle1" class="droppable">АЦП</div>
-                <div id="rectangle2" class="droppable">Микро-<br>процессор</div>
-                <div id="rectangle3" class="droppable">ЦАП</div>
-                <div id="rectangle4" class="droppable">Фильтр НЧ</div>
+                <div id="rectangle1" class="droppable1">АЦП</div>
+                <div id="rectangle2" class="droppable2">Микро-<br>процессор</div>
+                <div id="rectangle3" class="droppable3">ЦАП</div>
+                <div id="rectangle4" class="droppable4">Фильтр НЧ</div>
                 <button id="play"><img src="../amplitude/images/play.svg" alt="play"></button>
             </div>
         </div>
         <div class="devices">
             <h2>Устройства:</h2>
-            <div class="draggable">
+            <div class="draggable1" tooltip-1="ЦАП">
                 <img src="../amplitude/images/цап.svg" alt="wag">
             </div>
-            <div class="draggable"><img data-tooltip_1="АЦП" src="../amplitude/images/ацп.svg" alt="fwg"></div>
-            <div class="draggable"><img src="../amplitude/images/процессор.svg" alt="ghjw"></div>
-            <div class="draggable"><img src="../amplitude/images/фнч.svg" alt="ayx"></div>
+            <div class="draggable2" tooltip-2="АЦП"><img src="../amplitude/images/ацп.svg" alt="fwg"></div>
+            <div class="draggable3" tooltip-3="Процессор"><img src="../amplitude/images/процессор.svg" alt="ghjw"></div>
+            <div class="draggable4" tooltip-4="ФНЧ"><img src="../amplitude/images/фнч.svg" alt="ayx"></div>
         </div>
         <div class="get-signal">
             <h2>Полученные сигналы:</h2>
@@ -98,17 +98,17 @@
                     <h3>Частота дискретизации</h3>
                     <div class="f1">
                         <div class="f-min">100кГЦ</div>
-                        <input type="range" min="0.5" max="15" step="0.1" value="4" id="Frequency">
+                        <input type="range" min="0.5" max="8" step="0.5" value="4" id="Frequency">
                         <div class="f-max">15кГц</div>
                         <button class="ok" id="butt1">OK</button>
                     </div>
-                    <h3>Время</h3>
+                    <!-- <h3>Время</h3>
                     <div class="t1">
                         <div class="t-min">5c</div> <input type="range" min="0.5" max="10" step="0.1" value="0.5"
                             id="time">
                         <div class="t-max">0.1мс</div>
                         <button class="ok" id="butt2">OK</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
