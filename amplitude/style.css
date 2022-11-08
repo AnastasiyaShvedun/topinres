@@ -37,7 +37,7 @@ body {
     top: 249px;
     left: 528px;
     background-color: #fff;
-    z-index: 20;
+    z-index: 20000;
     border-radius: 65px;
     padding: 31px 17px 23px 37px;
 }
@@ -407,7 +407,7 @@ h2 {
     font-size: 13px;
     line-height: 15px;
     text-align: justify;
-    position: absolute;
+    position: fixed;
     top: 380px;
     left: 508px;
     color: #FFFFFF;
@@ -417,6 +417,7 @@ h2 {
 }
 
 [tooltip-2]:after {
+    position: fixed;
     content: attr(tooltip-2);
     padding: 5px 27px;
     top: 380px;
@@ -424,6 +425,7 @@ h2 {
 }
 
 [tooltip-3]:after {
+    position: fixed;
     content: attr(tooltip-3);
     padding: 3px 13px;
     top: 380px;
@@ -431,6 +433,7 @@ h2 {
 }
 
 [tooltip-4]:after {
+    position: fixed;
     content: attr(tooltip-4);
     padding: 3px 27px;
     top: 380px;
@@ -453,6 +456,28 @@ h2 {
     margin-top: 20px;
 }
 
+.draggable1,
+.draggable2,
+.draggable3,
+.draggable4 {
+    position: absolute;
+}
+
+.draggable1 {
+    left: 457px;
+}
+
+.draggable2 {
+    left: 586px;
+}
+
+.draggable3 {
+    left: 745px;
+}
+
+.draggable4 {
+    left: 900px;
+}
 
 
 /* сигнал */
