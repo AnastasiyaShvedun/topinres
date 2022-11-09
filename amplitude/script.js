@@ -14,130 +14,130 @@ let inp_1 = 30;
 
 
 // // перенос элементов 1
-// var DragManager1 = new function () {
+var DragManager = new function () {
 
-//     var dragObject1 = {};
+    var dragObject = {};
 
-//     var self1 = this;
+    var self = this;
 
-//     function onMouseDown1(e) {
-//         if (e.which != 1) return;
-//         var elem1 = e.target.closest('.draggable1');
-//         if (!elem1) return;
-//         dragObject1.elem = elem1;
-//         dragObject1.downX = e.pageX;
-//         dragObject1.downY = e.pageY;
-//         return false;
-//     }
+    function onMouseDown(e) {
+        if (e.which != 1) return;
+        var elem = e.target.closest('.draggable1');
+        if (!elem) return;
+        dragObject.elem = elem;
+        dragObject.downX = e.pageX;
+        dragObject.downY = e.pageY;
+        return false;
+    }
 
-//     function onMouseMove1(e) {
-//         if (!dragObject1.elem1) return;
-//         if (!dragObject1.avatar1) {
-//             var moveX = e.pageX - dragObject1.downX;
-//             var moveY = e.pageY - dragObject1.downY;
+    function onMouseMove1(e) {
+        if (!dragObject.elem) return;
+        if (!dragObject.avatar) {
+            var moveX = e.pageX - dragObject.downX;
+            var moveY = e.pageY - dragObject.downY;
 
-//             if (Math.abs(moveX) < 3 && Math.abs(moveY) < 3) {
-//                 return;
-//             }
-//             dragObject1.avatar1 = createAvatar1(e);
-//             if (!dragObject1.avatar1) {
-//                 dragObject1 = {};
-//                 return;
-//             }
-//             var coords1 = getCoords1(dragObject1.avatar1);
-//             dragObject1.shiftX = dragObject1.downX - coords1.left;
-//             dragObject1.shiftY = dragObject1.downY - coords1.top;
+            if (Math.abs(moveX) < 3 && Math.abs(moveY) < 3) {
+                return;
+            }
+            dragObject.avatar = createAvatar(e);
+            if (!dragObject.avatar1) {
+                dragObject = {};
+                return;
+            }
+            var coords = getCoords(dragObject.avatar);
+            dragObject.shiftX = dragObject.downX - coords.left;
+            dragObject.shiftY = dragObject.downY - coords.top;
 
-//             startDrag1(e);
-//         }
-//         dragObject1.avatar1.style.left = e.pageX - dragObject1.shiftX + 'px';
-//         dragObject1.avatar1.style.top = e.pageY - dragObject1.shiftY + 'px';
+            startDrag(e);
+        }
+        dragObject.avatar.style.left = e.pageX - dragObject.shiftX + 'px';
+        dragObject.avatar.style.top = e.pageY - dragObject.shiftY + 'px';
 
-//         return false;
-//     }
+        return false;
+    }
 
-//     function onMouseUp1(e) {
-//         if (dragObject1.avatar1) {
-//             finishDrag1(e);
-//         }
-//         dragObject1 = {};
-//     }
+    function onMouseUp(e) {
+        if (dragObject.avatar) {
+            finishDrag(e);
+        }
+        dragObject = {};
+    }
 
-//     function finishDrag1(e) {
-//         var dropElem1 = findDroppable1(e);
+    function finishDrag(e) {
+        var dropElem = findDroppable(e);
 
-//         if (!dropElem1) {
-//             self1.onDragCancel1(dragObject1);
-//         } else {
-//             self1.onDragEnd1(dragObject1, dropElem1);
-//         }
-//     }
+        if (!dropElem) {
+            self.onDragCancel(dragObject);
+        } else {
+            self.onDragEnd(dragObject, dropElem);
+        }
+    }
 
-//     function createAvatar1(e) {
+    function createAvatar(e) {
 
-//         var avatar1 = dragObject1.elem1;
-//         var old1 = {
-//             parent1: avatar1.parentNode,
-//             nextSibling1: avatar1.nextSibling,
-//             position1: avatar1.position || '',
-//             left: avatar1.left || '',
-//             top: avatar1.top || '',
-//             zIndex: avatar1.zIndex || ''
-//         };
+        var avatar = dragObject.elem;
+        var old = {
+            parent: avatar.parentNode,
+            nextSibling: avatar.nextSibling,
+            position: avatar.position || '',
+            left: avatar.left || '',
+            top: avatar.top || '',
+            zIndex: avatar.zIndex || ''
+        };
 
-//         avatar1.rollback1 = function () {
-//             old1.parent1.insertBefore(avatar1, old1.nextSibling1);
-//             avatar1.style.position = old1.position1;
-//             avatar1.style.left = old1.left;
-//             avatar1.style.top = old1.top;
-//             avatar1.style.zIndex = old1.zIndex
-//         };
+        avatar.rollback = function () {
+            old.parent.insertBefore(avatar, old.nextSibling);
+            avatar.style.position = old.position;
+            avatar.style.left = old.left;
+            avatar.style.top = old.top;
+            avatar.style.zIndex = old.zIndex
+        };
 
-//         return avatar1;
-//     }
+        return avatar;
+    }
 
-//     function startDrag1(e) {
-//         var avatar1 = dragObject1.avatar1;
-//         document.body.appendChild(avatar1);
-//         avatar1.style.zIndex = 9999;
-//         avatar1.style.position = 'absolute';
-//     }
+    function startDrag(e) {
+        var avatar = dragObject.avatar;
+        document.body.appendChild(avatar);
+        avatar.style.zIndex = 9999;
+        avatar1.style.position = 'absolute';
+    }
 
-//     function findDroppable1(event) {
+    function findDroppable(event) {
 
-//         dragObject1.avatar1.hidden = true;
-//         var elem1 = document.elementFromPoint(event.clientX, event.clientY);
-//         dragObject1.avatar1.hidden = false;
+        dragObject.avatar.hidden = true;
+        var elem = document.elementFromPoint(event.clientX, event.clientY);
+        dragObject.avatar.hidden = false;
 
-//         if (elem1 == null) {
-//             return null;
-//         }
+        if (elem == null) {
+            return null;
+        }
 
-//         return elem1.closest1('.droppable1');
-//     }
+        return elem.closest('.droppable1');
+    }
 
-//     document.onmousemove = onMouseMove1;
-//     document.onmouseup = onMouseUp1;
-//     document.onmousedown = onMouseDown1;
+    document.onmousemove = onMouseMove;
+    document.onmouseup = onMouseUp;
+    document.onmousedown = onMouseDown;
 
-//     this.onDragEnd1 = function (dragObject1, dropElem1) { };
-//     this.onDragCancel1 = function (dragObject1) { };
+    this.onDragEnd = function (dragObject, dropElem) { };
+    this.onDragCancel = function (dragObject) { };
 
-// };
+};
 
 
-// function getCoords1(elem1) {
-//     var box1 = elem1.getBoundingClientRect();
+function getCoords(elem) {
+    var box = elem.getBoundingClientRect();
 
-//     return {
-//         top: box1.top + pageYOffset,
-//         left: box1.left + pageXOffset
-//     };
+    return {
+        top: box1.top + pageYOffset,
+        left: box1.left + pageXOffset
+    };
 
-// }
-// DragManager1.onDragCancel1 = function (dragObject1) {
-//     dragObject1.avatar1.rollback1();
-// };
+}
+DragManager.onDragCancel = function (dragObject) {
+    dragObject.avatar.rollback();
+};
 
 // // перенос элементов 2
 // var DragManager2 = new function () {
@@ -783,9 +783,182 @@ play.onclick = function () {
                                 }
                             }
                         }
+                        else if (fr == 4.5) {
+                            if (fr == 4.5) {
+                                ctx5.clearRect(0, 0, 407, 140)
+                                ctx5.stroke()
+                                for (let j = 0; j < 200; j += 2) {
+                                    ctx5.beginPath();
+                                    cx = 18 * input * j * 4 / fr;
+                                    cy = canvas5.height / 2;
+                                    ctx5.moveTo(cx, cy);
+                                    for (i = 1; i <= 18 * 4 / fr; i++) {
+                                        x = i * input;
+                                        y = inp_1 * Math.sin(33.5 * i / 180 * Math.PI);
+                                        ctx5.lineTo(cx + x, cy + y);
+                                    }
+                                    ctx5.stroke()
+                                    for (let z = 1; z < 200; z += 2) {
 
+                                        ctx5.beginPath();
+                                        cx = 18 * input * z * 4 / fr;
+                                        cy = canvas5.height / 2;
+                                        ctx5.moveTo(cx, cy);
+                                        for (i = 1; i <= 18 * 4 / fr; i++) {
+                                            x = i * input;
+                                            y = inp_1 * 1.8 * Math.sin(-33.8 * i / 180 * Math.PI);
+                                            ctx5.lineTo(cx + x, cy + y);
+                                        }
+                                        ctx5.stroke()
+                                    }
+                                }
+                            }
+                        }
+                        if (fr == 5) {
+                            ctx5.clearRect(0, 0, 407, 140)
+                            ctx5.stroke()
+                            for (let j = 0; j < 200; j += 2) {
+                                ctx5.beginPath();
+                                cx = 18 * input * j * 4 / fr;
+                                cy = canvas5.height / 2;
+                                ctx5.moveTo(cx, cy);
+                                for (i = 1; i <= 18 * 4 / fr; i++) {
+                                    x = i * input;
+                                    y = inp_1 * Math.sin(39 * i / 180 * Math.PI);
+                                    ctx5.lineTo(cx + x, cy + y);
+                                }
+                                ctx5.stroke()
+                                for (let z = 1; z < 200; z += 2) {
 
+                                    ctx5.beginPath();
+                                    cx = 18 * input * z * 4 / fr;
+                                    cy = canvas5.height / 2;
+                                    ctx5.moveTo(cx, cy);
+                                    for (i = 1; i <= 18 * 4 / fr; i++) {
+                                        x = i * input;
+                                        y = inp_1 * 1.8 * Math.sin(-39 * i / 180 * Math.PI);
+                                        ctx5.lineTo(cx + x, cy + y);
+                                    }
+                                    ctx5.stroke()
+                                }
+                            }
+                        }
+                        if (fr == 5.5) {
+                            ctx5.clearRect(0, 0, 407, 140)
+                            ctx5.stroke()
+                            for (let j = 0; j < 200; j += 2) {
+                                ctx5.beginPath();
+                                cx = 18 * input * j * 4 / fr;
+                                cy = canvas5.height / 2;
+                                ctx5.moveTo(cx, cy);
+                                for (i = 1; i <= 18 * 4 / fr; i++) {
+                                    x = i * input;
+                                    y = inp_1 * Math.sin(30 * i / 180 * Math.PI);
+                                    ctx5.lineTo(cx + x, cy + y);
+                                }
+                                ctx5.stroke()
+                                for (let z = 1; z < 200; z += 2) {
 
+                                    ctx5.beginPath();
+                                    cx = 18 * input * z * 4 / fr;
+                                    cy = canvas5.height / 2;
+                                    ctx5.moveTo(cx, cy);
+                                    for (i = 1; i <= 16.5 * 4 / fr; i++) {
+                                        x = i * input;
+                                        y = inp_1 * 1.8 * Math.sin(30 * i / 180 * Math.PI);
+                                        ctx5.lineTo(cx + x, cy + y);
+                                    }
+                                    ctx5.stroke()
+                                }
+                            }
+                        }
+                        if (fr == 6.5) {
+                            ctx5.clearRect(0, 0, 407, 140)
+                            ctx5.stroke()
+                            for (let j = 0; j < 200; j += 2) {
+                                ctx5.beginPath();
+                                cx = 18 * input * j * 4 / fr;
+                                cy = canvas5.height / 2;
+                                ctx5.moveTo(cx, cy);
+                                for (i = 1; i <= 18 * 4 / fr; i++) {
+                                    x = i * input;
+                                    y = inp_1 * Math.sin(35 * i / 180 * Math.PI);
+                                    ctx5.lineTo(cx + x, cy + y);
+                                }
+                                ctx5.stroke()
+                                for (let z = 1; z < 200; z += 2) {
+
+                                    ctx5.beginPath();
+                                    cx = 18 * input * z * 4 / fr;
+                                    cy = canvas5.height / 2;
+                                    ctx5.moveTo(cx, cy);
+                                    for (i = 1; i <= 18 * 4 / fr; i++) {
+                                        x = i * input;
+                                        y = inp_1 * 1.8 * Math.sin(35 * i / 180 * Math.PI);
+                                        ctx5.lineTo(cx + x, cy + y);
+                                    }
+                                    ctx5.stroke()
+                                }
+                            }
+                        }
+                        if (fr == 7) {
+                            ctx5.clearRect(0, 0, 407, 140)
+                            ctx5.stroke()
+                            for (let j = 0; j < 200; j += 2) {
+                                ctx5.beginPath();
+                                cx = 18 * input * j * 4 / fr;
+                                cy = canvas5.height / 2;
+                                ctx5.moveTo(cx, cy);
+                                for (i = 1; i <= 18 * 4 / fr; i++) {
+                                    x = i * input;
+                                    y = inp_1 * Math.sin(38 * i / 180 * Math.PI);
+                                    ctx5.lineTo(cx + x, cy + y);
+                                }
+                                ctx5.stroke()
+                                for (let z = 1; z < 200; z += 2) {
+
+                                    ctx5.beginPath();
+                                    cx = 18 * input * z * 4 / fr;
+                                    cy = canvas5.height / 2;
+                                    ctx5.moveTo(cx, cy);
+                                    for (i = 1; i <= 18 * 4 / fr; i++) {
+                                        x = i * input;
+                                        y = inp_1 * 1.8 * Math.sin(37 * i / 180 * Math.PI);
+                                        ctx5.lineTo(cx + x, cy + y);
+                                    }
+                                    ctx5.stroke()
+                                }
+                            }
+                        }
+                        if (fr == 7.5 || fr == 8) {
+                            ctx5.clearRect(0, 0, 407, 140)
+                            ctx5.stroke()
+                            for (let j = 0; j < 200; j += 2) {
+                                ctx5.beginPath();
+                                cx = 18 * input * j * 4 / fr;
+                                cy = canvas5.height / 2;
+                                ctx5.moveTo(cx, cy);
+                                for (i = 1; i <= 18 * 4 / fr; i++) {
+                                    x = i * input;
+                                    y = inp_1 * Math.sin(40 * i / 180 * Math.PI);
+                                    ctx5.lineTo(cx + x, cy + y);
+                                }
+                                ctx5.stroke()
+                                for (let z = 1; z < 200; z += 2) {
+
+                                    ctx5.beginPath();
+                                    cx = 18 * input * z * 4 / fr;
+                                    cy = canvas5.height / 2;
+                                    ctx5.moveTo(cx, cy);
+                                    for (i = 1; i <= 18 * 4 / fr; i++) {
+                                        x = i * input;
+                                        y = inp_1 * 1.8 * Math.sin(40 * i / 180 * Math.PI);
+                                        ctx5.lineTo(cx + x, cy + y);
+                                    }
+                                    ctx5.stroke()
+                                }
+                            }
+                        }
                         //change f4
                         ctx4.clearRect(0, 0, 407, 68);
                         let height_4 = canvas4.height - inp_1;
