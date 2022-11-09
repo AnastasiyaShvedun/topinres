@@ -291,7 +291,7 @@ h2 {
     padding-top: 50px;
     width: 126px;
     height: 124px;
-    background: #D3E5FF;
+    background: none;
     border: none;
     font-family: 'Roboto';
     font-style: normal;
@@ -308,7 +308,7 @@ h2 {
 #rectangle2 {
     width: 126px;
     height: 124px;
-    background: #D3E5FF;
+    background: none;
     border: none;
     font-family: 'Roboto';
     font-style: normal;
@@ -322,7 +322,7 @@ h2 {
     padding-top: 40px;
     position: absolute;
     top: 226px;
-    left: 546px;
+    left: 600px;
     width: 134px;
     padding-top: 40px;
 
@@ -331,7 +331,7 @@ h2 {
 #rectangle3 {
     width: 126px;
     height: 124px;
-    background: #D3E5FF;
+    background: none;
     border: none;
     font-family: 'Roboto';
     font-style: normal;
@@ -345,7 +345,7 @@ h2 {
     padding-top: 40px;
     position: absolute;
     top: 226px;
-    left: 733px;
+    left: 750px;
     width: 149px;
     padding-top: 50px;
 }
@@ -353,7 +353,7 @@ h2 {
 #rectangle4 {
     width: 126px;
     height: 124px;
-    background: #D3E5FF;
+    background: none;
     border: none;
     font-family: 'Roboto';
     font-style: normal;
@@ -367,7 +367,7 @@ h2 {
     padding-top: 40px;
     position: absolute;
     top: 226px;
-    left: 926px;
+    left: 940px;
     width: 132px;
     padding-top: 50px;
 }
